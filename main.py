@@ -11,7 +11,7 @@ blue_t = Turtle()
 pink_t = Turtle()
 goal = Turtle()
 screen = Screen()
-
+screen.setup(width=.75, height=0.80, startx=None, starty=None)
 turtles = [red_t, green_t, blue_t, pink_t]
 turtle_colors = ["red", "green", "blue", "pink"]
 position_start = [400, 200, 0, -200]
@@ -65,7 +65,7 @@ def main():
 
 
 ROOT = tk.Tk()
-ROOT.geometry("1000x1000")
+# ROOT.geometry("2000x1000")
 ROOT.withdraw()
 
 # the input dialog to pick a turtle
@@ -98,5 +98,5 @@ if winning_turtle.lower() == user_choice:
 else:
     winner = tk.messagebox.showinfo("Results", f"The Winner is the {winning_turtle.title()} Turtle! You Lost.. :(")
 
-screen.screensize(600, 600)
+# screen.screensize(1000, 600)
 screen.exitonclick()
